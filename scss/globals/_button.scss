@@ -1,0 +1,23 @@
+@use "../util/" as u;
+
+.button {
+  color: var(--color-dk-purple);
+  background-color: var(--color-green);
+  padding: 12px 21px 12px;
+
+  border: 2px solid var(--color-green);
+  display: inline-block;
+  transition: 150ms ease-in-out;
+  transition-property: background-color, color;
+  font-weight: 700;
+
+  @include u.breakpoint(large) {
+    padding: 13px 30px 17px;
+  }
+
+  &:hover {
+    color: var(--color-green);
+    border: 2px solid;
+    background-color: transparent;
+  }
+}
